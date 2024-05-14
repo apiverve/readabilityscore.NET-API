@@ -1,0 +1,38 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <Nullable>enable</Nullable>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Title>APIVerve.API.TextReadabilityScore</Title>
+    <Version>1.0.0</Version>
+    <Authors>APIVerve</Authors>
+    <Company>APIVerve</Company>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageRequireLicenseAcceptance>False</PackageRequireLicenseAcceptance>
+    <PackageReadmeFile>Readme.md</PackageReadmeFile>
+    <PackageProjectUrl>https://apiverve.com/marketplace/api/readabilityscore</PackageProjectUrl>
+    <SignAssembly>False</SignAssembly>
+    <Description>Readability Score is a simple tool for calculating the readability score of text. It returns the readability score based on various readability formulas.</Description>
+    <RepositoryUrl>https://github.com/apiverve/readabilityscore-NET</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>readability score; readability score api; readability score tool; readability score software; readability score service; readability score library; readability score sdk; readability score code; readability score script; readability score program; readability score application; readability score app; readability score utility; readability score helper; readability score helper tool; readability score helper software; readability score helper service; readability score helper library; readability score helper sdk; readability score helper code; readability score helper script; readability score helper program; readability score helper application; readability score helper app; readability score helper utility; readability score helper</PackageTags>
+    <Copyright>©2024 APIVerve. All Rights Reserved</Copyright>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="LICENSE">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Update="Readme.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>
