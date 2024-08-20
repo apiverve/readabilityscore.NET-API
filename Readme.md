@@ -70,7 +70,7 @@ Using the API client, you can perform requests to the API.
 ###### Define Query
 
 ```
-var queryOptions = new readabilityscoreQueryOptions {
+var queryOptions = new TextReadabilityScoreQueryOptions {
   text = "Western astrology is founded on the movements and relative positions of celestial bodies such as the Sun, Moon and planets, which are analysed by their movement through signs of the zodiac (twelve spatial divisions of the ecliptic) and by their aspects (based on geometric angles) relative to one another."
 };
 ```
@@ -112,7 +112,8 @@ if(response.error != null) {
       "fleschReadingEase": "very confusing",
       "daleChallReadabilityScore": "average 13th to 15th-grade (college) student"
     }
-  }
+  },
+  "code": 200
 }
 ```
 
