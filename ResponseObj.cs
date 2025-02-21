@@ -32,13 +32,13 @@ public class readability
     public double colemanLiauIndex { get; set; }
 
     [JsonProperty("smogIndex")]
-    public int smogIndex { get; set; }
+    public double smogIndex { get; set; }
 
     [JsonProperty("automatedReadabilityIndex")]
     public double automatedReadabilityIndex { get; set; }
 
     [JsonProperty("daleChallReadabilityScore")]
-    public double daleChallReadabilityScore { get; set; }
+    public int daleChallReadabilityScore { get; set; }
 
 }
 
