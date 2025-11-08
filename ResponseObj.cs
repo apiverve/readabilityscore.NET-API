@@ -4,81 +4,88 @@ using Newtonsoft.Json;
 
 namespace APIVerve
 {
-public class textCounts
-{
-    [JsonProperty("syllableCount")]
-    public int syllableCount { get; set; }
+    /// <summary>
+    /// TextCounts data
+    /// </summary>
+    public class TextCounts
+    {
+        [JsonProperty("syllableCount")]
+        public int SyllableCount { get; set; }
 
-    [JsonProperty("lexiconCount")]
-    public int lexiconCount { get; set; }
+        [JsonProperty("lexiconCount")]
+        public int LexiconCount { get; set; }
 
-    [JsonProperty("sentenceCount")]
-    public int sentenceCount { get; set; }
+        [JsonProperty("sentenceCount")]
+        public int SentenceCount { get; set; }
 
-}
+    }
+    /// <summary>
+    /// Readability data
+    /// </summary>
+    public class Readability
+    {
+        [JsonProperty("fleschReadingEase")]
+        public double FleschReadingEase { get; set; }
 
-public class readability
-{
-    [JsonProperty("fleschReadingEase")]
-    public double fleschReadingEase { get; set; }
+        [JsonProperty("fleschKincaidGrade")]
+        public double FleschKincaidGrade { get; set; }
 
-    [JsonProperty("fleschKincaidGrade")]
-    public double fleschKincaidGrade { get; set; }
+        [JsonProperty("gunningFog")]
+        public double GunningFog { get; set; }
 
-    [JsonProperty("gunningFog")]
-    public double gunningFog { get; set; }
+        [JsonProperty("colemanLiauIndex")]
+        public double ColemanLiauIndex { get; set; }
 
-    [JsonProperty("colemanLiauIndex")]
-    public double colemanLiauIndex { get; set; }
+        [JsonProperty("smogIndex")]
+        public double SmogIndex { get; set; }
 
-    [JsonProperty("smogIndex")]
-    public double smogIndex { get; set; }
+        [JsonProperty("automatedReadabilityIndex")]
+        public double AutomatedReadabilityIndex { get; set; }
 
-    [JsonProperty("automatedReadabilityIndex")]
-    public double automatedReadabilityIndex { get; set; }
+        [JsonProperty("daleChallReadabilityScore")]
+        public int DaleChallReadabilityScore { get; set; }
 
-    [JsonProperty("daleChallReadabilityScore")]
-    public int daleChallReadabilityScore { get; set; }
+    }
+    /// <summary>
+    /// ReadabilityText data
+    /// </summary>
+    public class ReadabilityText
+    {
+        [JsonProperty("fleschReadingEase")]
+        public string FleschReadingEase { get; set; }
 
-}
+        [JsonProperty("daleChallReadabilityScore")]
+        public string DaleChallReadabilityScore { get; set; }
 
-public class readabilityText
-{
-    [JsonProperty("fleschReadingEase")]
-    public string fleschReadingEase { get; set; }
+    }
+    /// <summary>
+    /// Data data
+    /// </summary>
+    public class Data
+    {
+        [JsonProperty("textCounts")]
+        public TextCounts TextCounts { get; set; }
 
-    [JsonProperty("daleChallReadabilityScore")]
-    public string daleChallReadabilityScore { get; set; }
+        [JsonProperty("readability")]
+        public Readability Readability { get; set; }
 
-}
+        [JsonProperty("readabilityText")]
+        public ReadabilityText ReadabilityText { get; set; }
 
-public class data
-{
-    [JsonProperty("textCounts")]
-    public textCounts textCounts { get; set; }
+    }
+    /// <summary>
+    /// API Response object
+    /// </summary>
+    public class ResponseObj
+    {
+        [JsonProperty("status")]
+        public string Status { get; set; }
 
-    [JsonProperty("readability")]
-    public readability readability { get; set; }
+        [JsonProperty("error")]
+        public object Error { get; set; }
 
-    [JsonProperty("readabilityText")]
-    public readabilityText readabilityText { get; set; }
+        [JsonProperty("data")]
+        public Data Data { get; set; }
 
-}
-
-public class ResponseObj
-{
-    [JsonProperty("status")]
-    public string status { get; set; }
-
-    [JsonProperty("error")]
-    public object error { get; set; }
-
-    [JsonProperty("data")]
-    public data data { get; set; }
-
-    [JsonProperty("code")]
-    public int code { get; set; }
-
-}
-
+    }
 }
